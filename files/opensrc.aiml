@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<category>
+    <pattern>OPEN SOURCE</pattern>
+    <template>An <set name="topic">open source</set> software is code that is designed to be publicly accessible—anyone can see, modify, and distribute the code as they see fit.
+    <button>
+        <text>Code</text>
+        <postback>CODE</postback>
+    </button>
+    <button>
+        <text>Go back</text>
+        <postback>WHAT IS MYSQL</postback>
+        </button>
+    </template>
+</category>
+
+
+<topic name= "open source">
+    
+    
+    <category>
+        <pattern>CODE</pattern>
+        <template>In computer programming, computer code refers to the set of instructions, or a system of rules, written in a particular programming language.
+        <button>
+            <text>About programming languages...</text>
+            <postback>PROGRAMMING LANGUAGE</postback>
+        </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>PROGRAMMING LANGUAGE</pattern>
+        <template>A programming language is a system of notation for writing computer programs. Most programming languages are text-based formal languages, but they may also be graphical. They are a kind of computer language, with some being more complex (high level languages) and others being simple, yet not translatable into human language (low level languages).
+            
+            <button>
+            <text>Layout classification</text>
+            <postback>LAYOUT</postback>
+            </button>
+   
+            <button>
+                <text>Complexity classification</text>
+                <postback>COMPLEXITY</postback>
+            </button>
+            <button>
+                <text>Go back to Open Source</text>
+                <postback>OPEN SOURCE</postback>
+            </button>
+            </template>
+    </category>
+    
+    
+    
+    
+<!--LAYOUT-->    
+    
+<category>
+    <pattern>VISUAL BASED</pattern>
+    <template>Visual-based programming languages are ones that allow you to manipulate visual elements such as drag and drop blocks to make a program – like Scratch.
+    <button>
+        <text>Go back</text>
+        <postback>LAYOUT</postback>
+    </button>
+    </template>
+</category>
+
+<category>
+    <pattern>TEXT BASED</pattern>
+    <template>Text-based programming languages are ones that you have to write lines of code in order to make a program – like C++, Java, Python.
+    <button>
+        <text>Go back</text>
+        <postback>LAYOUT</postback>
+    </button></template>
+</category>
+
+
+
+
+<!--COMPLEXITY-->
+
+<category>
+    <pattern>MACHINE</pattern>
+    <template>Machine language is the direct representation of the code and data run directly by a computing device. The machine instructions are carried out in the hardware of the machine, so machine code is by definition machine-dependent. Different machines have different instruction sets. The instructions and their operands are all just bits.
+    <image>https://i.stack.imgur.com/686wZ.png</image>
+    <button>
+        <text>Go back</text>
+        <postback>COMPLEXITY</postback>
+    </button>
+    </template>
+</category>
+
+<category>
+    <pattern>ASSEMBLY</pattern>
+    <template>An assembly language is an encoding of machine code into something more readable. It assigns human-readable labels (or names) to storage locations, jump targets, and subroutine starting addresses, but doesn’t really go too far beyond that. It’s really isomorphic to its machine language.
+    <image>https://images.takeshape.io/undefined/undefined/6a7c0754-f06a-431d-b775-167f094d9edc/Screen%20Shot%202017-08-21%20at%203.05.43%20PM.png</image>
+    <button>
+        <text>Go back</text>
+        <postback>COMPLEXITY</postback>
+    </button>
+    </template>
+</category>
+
+<category>
+    <pattern>HIGH LEVEL</pattern>
+    <template>The high-level language is a programming language that allows a programmer to write the programs which are independent of a particular type of computer. The high-level languages are considered as high-level because they are closer to human languages than machine-level languages.
+    <image>https://techterms.com/img/lg/high-level_language_1286.png</image>
+    <button>
+        <text>Go back</text>
+        <postback>COMPLEXITY</postback>
+    </button>
+    </template>
+</category>
+
+<category>
+    <pattern>SYSTEM</pattern>
+    <template>System programming languages differ from application programming languages in that they are more concerned with managing a computer system rather than solving general problems in health care, game playing, or finance.
+    <button>
+        <text>Go back</text>
+        <postback>COMPLEXITY</postback>
+    </button>
+    </template>
+</category>
+
+<category>
+    <pattern>SCRIPTING</pattern>
+    <template>Scripting languages are used for wiring together systems and applications at a very high level. They are almost always extremely expressive (they do a lot with very little code) and usually dynamic (meaning the compiler does very little, while the run-time system does almost everything).
+    <button>
+        <text>Go back</text>
+        <postback>COMPLEXITY</postback>
+    </button>
+    </template>
+</category>
+
+
+
+<!--MENUS FOR LAYOUT & COMPLEXITY-->
+
+<category>
+    <pattern>LAYOUT</pattern>
+    <template>
+        <carousel>
+                <card>
+                <image>https://ineasysteps.com/wp-content/uploads/2016/10/score-code-2.png</image>
+                <title>Visual-based language</title>
+                <subtitle></subtitle>
+                <button>
+                    <text>Learn more</text>
+                    <postback>VISUAL BASED</postback>
+                </button>
+                </card>
+                
+                <card>
+                    <image>https://www.researchgate.net/profile/Lukasz-Sobaszek/publication/308661509/figure/fig1/AS:410914042990592@1474980950082/Visual-Basic-high-level-programming-language-source-own-study.png</image>
+                    <title>Text-based language</title>
+                    <subtitle></subtitle>
+                    <button>
+                        <text>Learn more</text>
+                        <postback>TEXT BASED</postback>
+                    </button>
+                </card>
+            </carousel>
+            <button>
+                <text>Go back to Programming Languages</text>
+                <postback>PROGRAMMING LANGUAGE</postback>
+            </button>
+    </template>
+</category>
+
+<category>
+    <pattern>COMPLEXITY</pattern>
+    <template>
+        <button>
+            <text>Machine Language</text>
+            <postback>MACHINE</postback>
+        </button>
+        <button>
+            <text>Assembly Language</text>
+            <postback>ASSEMBLY</postback>
+        </button>
+        <button>
+            <text>High-Level Language</text>
+            <postback>HIGH LEVEL</postback>
+        </button>
+        <button>
+            <text>System Language</text>
+            <postback>SYSTEM</postback>
+        </button>
+        <button>
+            <text>Scripting Language</text>
+            <postback>SCRIPTING</postback>
+        </button>
+        <button>
+            <text>Back to Programming Languages</text>
+            <postback>PROGRAMMING LANGUAGE</postback>
+        </button>
+    </template>
+</category>
+</topic>
+
+</aiml>

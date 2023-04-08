@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>DATABASE</pattern>
+    <template>A <set name="topic">database</set> is an organized collection of structured information, or data, typically stored electronically in a computer system. A database is usually controlled by a database management system (DBMS).
+    <reply>
+        <text>What are DBMS?</text>
+        <postback>DBMS</postback>
+    </reply>
+    </template>
+</category>
+
+<topic name= "database">
+    
+    <category>
+        <pattern>DBMS</pattern>
+        <template>
+            Database Management Systems (DBMS) are software systems that serve as an interface between an end-user and a database, allowing users to create, read, update, and delete data in the database. Classification of database management system is based on various parameters such as the kind of data model used to construct the DBMS, the number of users that will be using the database system, the way in which the database is distributed.
+            <button>
+                <text>Classification</text>
+                <postback>CLASSIFICATION</postback>
+            </button>
+            <button>
+                <text>User interaction</text>
+                <postback>USER</postback>
+            </button>
+            <button>
+                <text>Go back</text>
+                <postback>WHAT IS MYSQL</postback>
+            </button>
+        </template>
+    </category>
+    
+
+
+<!--                   RDB                      -->    
+
+    <category>
+        <pattern>RDB</pattern>
+        <template>
+            A relational database is a type of database that stores and provides access to data points that are related to one another. Relational databases are based on the relational model, an intuitive, straightforward way of representing data in tables. Databases are used in your grocery store, bank, restaurant, online shopping sites, hospital, favorite clothing store and mobile service provider, for instance all use databases to keep track of customer, business and relationship accounting information.
+            <button>
+                <text>Management</text>
+                <postback>RDBMS</postback>
+            </button>
+            <button>
+                <text>Particularity</text>
+                <postback>PARTICULAR</postback>
+            </button>
+            <button>
+                <text>Usage</text>
+                <postback>USAGE RDB</postback>
+            </button>
+            <button>
+                <text>Go back</text>
+                <postback>CLASSIFICATION</postback>
+            </button>
+        </template>
+    </category>
+    
+ 
+<!--TYPES OF RDB-->   
+
+
+    <category>
+        <pattern>RDBMS</pattern>
+        <template>
+            An RDBMS is a type of database management system (DBMS) that stores data in a row-based table structure which connects related data elements. An RDBMS includes functions that maintain the security, accuracy, integrity and consistency of the data.
+            <image>https://www.pragimtech.com/blog/contribute/article_images/2220211210231003/what-is-a-relational-database.jpg</image>
+            <button>
+                <text>Go back</text>
+                <postback>RDB</postback>
+            </button>
+        </template>
+    </category>
+ 
+ 
+    <category>
+        <pattern>DISTRIBUTED</pattern>
+        <template>
+            A distributed database is a database that runs and stores data across multiple computers, as opposed to doing everything on a single machine. Typically, distributed databases operate on two or more interconnected servers on a computer network.
+            <button>
+                <text>Go back</text>
+                <postback>RDB</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>OLTP</pattern>
+        <template>
+            OLTP (Online Transaction Processing) is a data processing category that deals with numerous transactions performed by many users. The OLTP system is an online database system that processes day-to-day queries that usually involve inserting, updating, and deleting data.
+            <button>
+                <text>Go back</text>
+                <postback>RDB</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>PARTICULAR</pattern>
+        <template>
+            <button>
+                <text>Distributed DB</text>
+                <postback>DISTRIBUTED</postback>
+            </button>
+            <button>
+                <text>OLTP DB</text>
+                <postback>OLTP</postback>
+            </button>
+        </template>
+    </category>
+    
+    
+    
+<!--USAGES FOR RDB-->
+
+    <category>
+        <pattern>CUSTOMER</pattern>
+        <template>
+            Customer data is the behavioral, demographic and personal information about customers collected by businesses and marketing companies to understand, communicate and engage with customers.
+            <button>
+                <text>Go back</text>
+                <postback>USAGE RDB</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>BUSINESS</pattern>
+        <template>
+            Business data is the collective information related to a company and its operations. This can include any statistical information, raw analytical data, customer feedback data, sales numbers and other sets of information.            <button>
+                <text>Go back</text>
+                <postback>USAGE RDB</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>RELATIONSHIP</pattern>
+        <template>
+            Relationship data refers to the geographical locations of different stores and their respective inventories with a specific product in stock.
+            <button>  
+                <text>Go back</text>
+                <postback>USAGE RDB</postback>
+            </button>
+        </template>
+    </category>
+    
+    
+
+    
+<!--                   USER INTERACTION                 -->
+
+    <category>
+        <pattern>USER</pattern>
+        <template>
+            <button>
+                <text>How do I start managing my own database?</text>
+                <postback>EXAMPLES INTERFACE</postback>
+            </button>
+             <button>
+                <text>Go back</text>
+                <postback>DBMS</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>USAGE RDB</pattern>
+        <template>
+            <button>
+                <text>Customer data</text>
+                <postback>CUSTOMER</postback>
+            </button>
+            <button>
+                <text>Business data</text>
+                <postback>BUSINESS</postback>
+            </button>
+            <button>
+                <text>Relationship data</text>
+                <postback>RELATIONSHIP</postback>
+            </button>
+            <button>
+                <text>Go back</text>
+                <postback>RDB</postback>
+            </button>
+        </template>
+    </category> 
+    
+    <category>
+    <pattern>DOWNLOAD</pattern>
+        <template>
+            You can access the official website’s downloads page and choose your desired version and subscription plan by clicking this link:
+            <button>
+                <text>Download MySQL</text>
+                <url>https://www.mysql.com/downloads/</url>
+            </button>
+            <button>
+                <text>Go back</text>
+                <postback>EXAMPLES INTERFACE</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>EX DBMS</pattern>
+        <template>
+            The most well known DBMS are Microsoft SQL Server and Microsoft Access, Oracle Database and MongoDB, PostgreSQL and IBM DB2.
+            <button>
+                <text>Go back</text>
+                <postback>EXAMPLES INTERFACE</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>POPULAR DBMS</pattern>
+        <template>
+            As of February 2023, the most popular database management system (DBMS) in the world was Oracle, with a ranking score of 1247.52.
+            <button>
+                <text>Go back</text>
+                <postback>EXAMPLES INTERFACE</postback>
+            </button>
+        </template>
+    </category>
+    
+    
+    <category>
+        <pattern>EXAMPLES INTERFACE</pattern>
+        <template>
+            <button>
+                <text>Download</text>
+                <postback>DOWNLOAD</postback>
+            </button>
+            <button>
+                <text>Examples of DBMS</text>
+                <postback>EX DBMS</postback>
+            </button>
+            <button>
+                <text>Popular DBMS</text>
+                <postback>POPULAR DBMS</postback>
+            </button>
+            <button>
+                <text>Go back</text>
+                <postback>DBMS</postback>
+            </button>
+        </template>
+    </category>
+    
+    
+    
+
+<!--                        ODD                          -->   
+
+<category>
+    <pattern>CAD CAM</pattern>
+    <template>CAD/CAM refers to the integration of Computer-aided design (CAD) and Computer-aided manufacturing (CAM). CAD/CAM software is used to design and manufacture prototypes, finished products, and production runs of products using a single development tool.
+    <button>
+        <text>Go back</text>
+        <postback>OOD</postback>
+    </button>
+    </template>
+</category>
+
+<category>
+    <pattern>GIS</pattern>
+    <template>
+        A geographic information system (GIS) is a computer system for capturing, storing, checking, and displaying data related to positions on Earth’s surface. GIS can show many different kinds of data on one map, such as streets, buildings, and vegetation. This enables people to more easily see, analyze, and understand patterns and relationships.
+        <button>
+        <text>Go back</text>
+        <postback>OOD</postback>
+    </button>
+    </template>
+</category>
+
+<category>
+    <pattern>DMS</pattern>
+    <template>
+        A document management system (DMS) is usually a computerized system used to store, share, track and manage files or documents. Some systems include history tracking where a log of the various versions created and modified by different users is recorded.
+        <button>
+        <text>Go back</text>
+        <postback>OOD</postback>
+    </button>
+    </template>
+</category>
+
+
+<category>
+    <pattern>OOD</pattern>
+    <template>
+        An object-oriented database (OOD) is a database system that can work with complex data objects — that is, objects that mirror those used in object-oriented programming languages. In object-oriented programming (OOP), everything is an object. Object-oriented databases are often used in applications that require the efficient management of complex data structures and relationships, such as CAD/CAM systems, geographic information systems, and document management systems.
+        <br></br>
+        <br></br>
+        Learn more about the usages of OOD.
+        <button>
+            <text>CAD CAM</text>
+            <postback>CAD CAM</postback>
+        </button>
+        <button>
+            <text>GIS</text>
+            <postback>GIS</postback>
+        </button>
+        <button>
+            <text>DMS</text>
+            <postback>DMS</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>CLASSIFICATION</postback>
+        </button>
+    </template>
+</category>
+
+
+
+
+<!--                        DW                           -->
+
+<category>
+    <pattern>EDW</pattern>
+    <template>
+        An enterprise data warehouse (EDW) is a centralized warehouse that provides decision support services across the enterprise. EDWs are usually a collection of databases that offer a unified approach for organizing data and classifying data according to subject.
+        <button>
+            <text>Go back</text>
+            <postback>TYPES DW</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>ODS</pattern>
+    <template>
+        An operational data store (ODS) is a central database used for operational reporting as a data source for the enterprise data warehouse described above. An ODS is a complementary element to an EDW and is used for operational reporting, controls, and decision making.
+        <button>
+            <text>Go back</text>
+            <postback>TYPES DW</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>DATA MART</pattern>
+    <template>
+        A data mart is considered a subset of a data warehouse and is usually oriented to a specific team or business line, such as finance or sales. It is subject-oriented, making specific data available to a defined group of users more quickly, providing them with critical insights. The availability of specific data ensures that they do not need to waste time searching through an entire data warehouse.
+        <button>
+            <text>Go back</text>
+            <postback>TYPES DW</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>OLAP DB</pattern>
+    <template>
+        Online analytical processing (OLAP) is a technology that organizes large business databases and supports complex analysis. It can be used to perform complex analytical queries without negatively affecting transactional systems.
+        <button>
+            <text>Go back</text>
+            <postback>TYPES DW</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>TYPES DW</pattern>
+    <template>
+        <button>
+            <text>EDW</text>
+            <postback>EDW</postback>
+        </button>
+        <button>
+            <text>ODS</text>
+            <postback>ODS</postback>
+        </button>
+        <button>
+            <text>Data Mart</text>
+            <postback>DATA MART</postback>
+        </button>
+        <button>
+            <text>OLAP Database</text>
+            <postback>OLAP DB</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>DW</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>USAGE DW</pattern>
+    <template>
+        Data warehouses are relational environments that are used for data analysis, particularly of historical data. Organizations use data warehouses to discover patterns and relationships in their data that develop over time.
+        <button>
+            <text>Go back</text>
+            <postback>DW</postback>
+        </button>
+    </template>
+</category>
+
+
+<category>
+    <pattern>DW</pattern>
+    <template>
+        A data warehouse is an enterprise system used for the analysis and reporting of structured and semi-structured data from multiple sources, such as point-of-sale transactions, marketing automation, customer relationship management, and more. A data warehouse is suited for ad hoc analysis as well custom reporting.
+        <button>
+            <text>Types</text>
+            <postback>TYPES DW</postback>
+        </button>
+        <button>
+            <text>Usage</text>
+            <postback>USAGE DW</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>CLASSIFICATION</postback>
+        </button>
+    </template>
+</category>
+
+
+<!--                          NOSQL                            -->
+
+
+<!--TYPES OF NOSQL-->
+<category>
+    <pattern>JSON</pattern>
+    <template>
+        A document database is a type of nonrelational database that is designed to store and query data as JSON-like documents. Document databases make it easier for developers to store and query data in a database by using the same document-model format they use in their application code.
+        <button>
+            <text>Go back</text>
+            <postback>TYPES NOSQL</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>KEY VALUE</pattern>
+    <template>
+        A key-value database is a type of nonrelational database that uses a simple key-value method to store data. A key-value database stores data as a collection of key-value pairs in which a key serves as a unique identifier. Both keys and values can be anything, ranging from simple objects to complex compound objects. 
+        <button>
+            <text>Go back</text>
+            <postback>TYPES NOSQL</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>COLUMNAR</pattern>
+    <template>
+        Like other NoSQL databases, column-oriented databases are designed to scale “out” using distributed clusters of low-cost hardware to increase throughput, making them ideal for data warehousing and Big Data processing. A columnar database is optimized for fast retrieval of columns of data, typically in analytical applications.        
+        <button>
+            <text>Go back</text>
+            <postback>TYPES NOSQL</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>GRAPH</pattern>
+    <template>
+        Graph databases are purpose-built to store and navigate relationships. Relationships are first-class citizens in graph databases, and most of the value of graph databases is derived from these relationships. Graph databases use nodes to store data entities, and edges to store relationships between entities.           
+        <button>
+        <text>Go back</text>
+        <postback>TYPES NOSQL</postback>
+        </button>
+    </template>
+</category>
+
+
+<category>
+    <pattern>TYPES NOSQL</pattern>
+    <template>
+        <button>
+            <text>Document Database</text>
+            <postback>JSON</postback>
+        </button>
+        <button>
+            <text>Key-value Store</text>
+            <postback>KEY VALUE</postback>
+        </button>
+        <button>
+            <text>Columnar Database</text>
+            <postback>COLUMNAR</postback>
+        </button>
+        <button>
+            <text>Graph Database</text>
+            <postback>GRAPH</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>NOSQL</postback>
+        </button>
+    </template>
+</category>
+
+
+<!--USAGES OF NOSQL-->
+
+<category>
+    <pattern>CM</pattern>
+    <template>
+        Content management is a set of processes for the collection, managing, delivery, retrieval, and publishing of information in any format including text, images, audio, and video. NoSQL databases can offer a better option for storing multimedia content with their flexible and open-ended data model.
+        <button>
+            <text>Go back</text>
+            <postback>USAGE NOSQL</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>IOT</pattern>
+    <template>
+        Internet of Things devices have embedded software and sensors that are connected to the internet or communications networks, and are able to collect and share data without human intervention. With billions of devices generating untold amounts of data, IoT NoSQL databases provide scalability and more flexible schema to IoT service providers.
+        <button>
+            <text>Go back</text>
+            <postback>USAGE NOSQL</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>MOBILE APPS</pattern>
+    <template>
+        With billions of smartphone users, scalability is becoming the biggest challenge for businesses that deliver services on mobile devices. A NoSQL DBMS, with more flexible data models, is often the perfect solution.
+        <button>
+            <text>Go back</text>
+            <postback>USAGE NOSQL</postback>
+        </button>
+    </template>
+</category>
+
+
+
+<category>
+    <pattern>USAGE NOSQL</pattern>
+    <template>
+        <button>
+            <text>Content Management</text>
+            <postback>CM</postback>
+        </button>
+        <button>
+            <text>Internet of Things</text>
+            <postback>IOT</postback>
+        </button>
+        <button>
+            <text>Mobile Applications</text>
+            <postback>MOBILE APPS</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>NOSQL</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>NOSQL</pattern>
+    <template>
+        A NoSQL, or nonrelational database, allows unstructured and semistructured data to be stored and manipulated (in contrast to a relational database, which defines how all data inserted into the database must be composed).
+        <button>
+            <text>Types</text>
+            <postback>TYPES NOSQL</postback>
+        </button>
+        <button>
+            <text>Usage</text>
+            <postback>USAGE NOSQL</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>CLASSIFICATION</postback>
+        </button>
+    </template>
+</category>
+
+
+<!--                        MAIN MENU                          -->
+
+
+    
+    <category>
+        <pattern>CLASSIFICATION</pattern>
+        <template>
+            There are currently four big categories of databases. Click on the buttons to learn more about each of them.
+            <button>
+                <text>RDB</text>
+                <postback>RDB</postback>
+            </button>
+            <button>
+                <text>OOD</text>
+                <postback>OOD</postback>
+            </button>
+            <button>
+                <text>Data Warehouse</text>
+                <postback>DW</postback>
+            </button>
+            <button>
+                <text>NoSQL</text>
+                <postback>NOSQL</postback>
+            </button>
+            <button>
+                <text>Go back to DBMS</text>
+                <postback>DBMS</postback>
+            </button>
+        </template>
+    </category>
+    
+
+</topic>
+
+</aiml>

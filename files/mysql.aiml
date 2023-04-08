@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+<category>
+    <pattern>WHAT IS MYSQL</pattern>
+    <template>MySQL is a widely used, open source, relational database management system (RDBMS) that uses SQL statements.
+    <button>
+        <text>Open Source</text>
+        <postback>OPEN SOURCE</postback>
+    </button>
+    <button>
+        <text>Database</text>
+        <postback>DATABASE</postback>
+    </button>
+    <button>
+        <text>SQL</text>
+        <postback></postback>
+    </button>
+    <button>
+        <text>History</text>
+        <postback></postback>
+    </button>
+    </template>
+</category>
+
+
+</aiml>

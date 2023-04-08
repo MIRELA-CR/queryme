@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+<category>
+<pattern>HELLO ^</pattern>
+<template><srai>HI ^</srai></template>
+</category>
+
+<category>
+<pattern>HEY ^</pattern>
+<template><srai>HI ^</srai></template>
+</category>
+
+<category>
+<pattern>HI ^</pattern>
+<template>Hello! I am QueryME, your personal assistant in MySQL. What is your name?</template>
+</category>   
+
+<category>
+    <pattern>OR NOT</pattern>
+    <template>
+        <random>
+            <li>There's no way to avoid talking about MySQL with me.</li>
+            <li>You will get bored and press the "Go back" button eventually.</li>
+            <li>I frankly don't know anything else apart from MySQL.</li>
+            <li>Are you sure you want to waste time on checking this option?</li>
+            <li>The other part of my code is more interesting.</li>
+        </random>
+    <button>
+        <text>Go back</text>
+        <postback>MY NAME IS *</postback>
+    </button>
+    </template>
+</category>
+
+<category>
+    <pattern>MY NAME IS *</pattern>
+    <template>
+         Great! Nice to meet you, <set name="name"><star/></set>.
+            <button>
+            <text>Proceed</text>
+            <postback>WHAT IS MYSQL</postback>
+            </button>
+            <button>
+            <text>...or not</text>
+            <postback>OR NOT</postback>
+            </button>
+    </template>
+</category>
+    
+
+</aiml>
