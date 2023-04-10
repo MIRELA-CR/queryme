@@ -10,37 +10,50 @@
 	    </template>
     </category>
     
+
     <category>
-        <pattern>DID YOU KNOW THAT * IS *</pattern>
+        <pattern>DID YOU KNOW THAT * <set>verbsask</set> *</pattern>
         <template>
-            I will remember that <set var="star"><star /></set> is <star index="2"/>. Thank you.
-            <learn>
-            <category>
-                <pattern>IS * *</pattern>
-                <template>
-                    Yes, <eval><star /></eval> is <eval><star index="2"/></eval>. You told me this.
-                </template>
-            </category>
-            </learn>
+            <think><set name="subject"><star/></set></think>
+            <think><set name="answer"><star index="3"/></set></think>
+            <think>
+		    <learn>
+			    <category>
+				    <pattern><eval><star/></eval></pattern>
+				    <template><eval><star index="3"/></eval></template>
+			    </category>
+	        </learn>
+	        </think>
+	        I will remember what you told me about <star/>. Thank you.
+	        <br></br><br></br>
+	        To check if I'm a good student, you can ask me the same thing again by typing "IS IT TRUE THAT...".
         </template>
     </category>
     
+    
+    <category>
+        <pattern>IS IT TRUE THAT * <set>verbsask</set> *</pattern>
+        <template>
+            <condition name="subject">
+                <li value="apples">
+                    <condition name="answer">
+                        <li value="fruits">Yes, you told me this about <get name="subject"/>.</li>
+                        <li value="vegetables">Of course. Now I know that <get name="subject"/> are connected to <get name="answer"/> because of you.</li>
+                        <li value="bad">It's a shame that <get name="subject"/> are like this according to you.</li>
+                        <li value="good">You said that <get name="subject"/> can be <get name="answer"/>. I think they are the best though!</li>
+                        <li>I'm not sure I know any info about <get name="subject"/>.</li>
+                    </condition>
+                </li>
+                <li value="Brad Pitt">
+                    <condition name="answer">
+                        <li value="America">You only mentioned that <get name="subject"/> comes from <get name="answer"/>.</li>
+                        <li value="South Korea">I think it's true that <get name="subject"/> should be connected to <get name="answer"/>. You told me this.</li>
+                        <li value="handsome">Obviously, you taught me that <get name="subject"/> is <get name="answer"/></li>
+                        <li>Who should this <get name="subject"/> be?</li>
+                    </condition>
+                </li>
+                <li>I don't know what to say about this. Please teach me.</li>
+            </condition>
+            </template>
+    </category>
 </aiml>   
-
-
-
-<!--
-<pattern>learn question * answer *</pattern>
-	<template>
-	<think>
-		<learn>
-			<category>
-				<pattern><eval><star/></eval></pattern>
-				<template><eval><star index="2"/></eval></template>
-			</category>
-		</learn>
-	</think>
-	Okay, I will answer "<star index="2"/>" to "<star/>" next time
-	</template>
-	
--->
