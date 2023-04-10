@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<category>
+    <pattern>HISTORY</pattern>
+    <template>
+        Ask me a question about MySQL's <set name="topic">history</set>. There you can find information about the foundation and development of various companies that were involved in MySQL's history, as well as explanations for each of the names.
+    </template>
+</category>
+
+
+<topic name= "history">
+
+<category>
+    <pattern>WHO <set>verbscreate</set> *</pattern>
+    <template>
+        <think><set name="creation"><star/></set></think>
+        <condition name="creation">
+            <li value="MySQL"><get name="creation"/> was created by a Swedish company, MySQL AB, founded by Swedes David Axmark, Allan Larsson and Finland Swede Michael "Monty" Widenius. Original development of MySQL by Widenius and Axmark began in 1994.</li>
+            <li value="ORACLE">Larry Ellison co-founded <get name="creation"/> Corporation in 1977 with Bob Miner and Ed Oates under the name Software Development Laboratories (SDL).</li>
+        </condition>
+    </template>
+</category>
+
+<category>
+        <pattern>WHAT HAPPENED TO *</pattern>
+        <template>
+            <think><set name="company"><star/></set></think>
+            <condition name="company">
+                <li value="MySQL AB">Widenius sold <get name="company"/> to Sun in January 2008, earning about €16.6 million in capital gains in 2008 (€16.8 million total income). However, he forked his individual work under the Monty Program AB.</li>
+                <li value="Sun">On April 20, 2009, it was announced that Oracle Corporation would acquire <get name="company"/> for US$7.4 billion. The deal was completed on January 27, 2010.</li>
+                <li value="Monty Program AB">MariaDB Corporation was formed after a merger between SkySQL and <get name="company"/> on 23 April 2013. Subsequently, the name was changed on 1 October 2014 to reflect the company's role as the main driving force behind the development of MariaDB Server and the largest support-provider for it.</li>
+                <li value="Maria DB"><get name="company"/> is now a community-developed, commercially supported fork of the MySQL relational database management system (RDBMS), intended to remain free and open-source software under the GNU General Public License.</li>
+                <li>I don't know what happened to <get name="company"/>.</li>
+            </condition>
+        </template>
+    </category>s
+
+<category>
+    <pattern>WHY IS * <set>verbscall</set> _</pattern>
+    <template>
+        <think><set name="name"><star/></set></think>
+        <condition name="name">
+            <li value="MySQL">MySQL’s title is a combination of "My", the name of co-founder Michael Widenius's daughter My, and "SQL", the acronym for Structured Query Language.</li>
+            <li value="Maria DB">MariaDB is named after Widenius' younger daughter, Maria.</li>
+            <li value="Oracle">Founded by Larry Ellison, Bob Miner, and Ed Oates, the Oracle name comes from a database project (named "Oracle") the trio had worked on for the CIA as contractors.</li>
+        </condition>
+    </template>
+</category>
+
+</topic>
+</aiml>

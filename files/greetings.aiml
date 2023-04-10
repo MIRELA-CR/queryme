@@ -2,6 +2,32 @@
 <aiml version="2.0">
 	
 <category>
+    <pattern>WHAT IS MYSQL</pattern>
+    <template>MySQL is a widely used, open source, relational database management system (RDBMS) that uses SQL statements.
+    <button>
+        <text>Open Source</text>
+        <postback>OPEN SOURCE</postback>
+    </button>
+    <button>
+        <text>Database</text>
+        <postback>DATABASE</postback>
+    </button>
+    <button>
+        <text>SQL</text>
+        <postback>SQL</postback>
+    </button>
+    <button>
+        <text>History</text>
+        <postback>HISTORY</postback>
+    </button>
+    <button>
+        <text>Go back</text>
+        <postback>HI ^</postback>
+    </button>
+    </template>
+</category>
+
+<category>
 <pattern>HELLO ^</pattern>
 <template><srai>HI ^</srai></template>
 </category>
@@ -13,7 +39,16 @@
 
 <category>
 <pattern>HI ^</pattern>
-<template>Hello! I am QueryME, your personal assistant in MySQL. What is your name?</template>
+<template>Hello! I am QueryME, your personal assistant in MySQL. Let's get started if you're ready.
+    <button>
+        <text>Proceed</text>
+        <postback>WHAT IS MYSQL</postback>
+    </button>
+    <button>
+        <text>...or not</text>
+        <postback>OR NOT</postback>
+    </button>
+</template>
 </category>   
 
 <category>
@@ -26,27 +61,19 @@
             <li>Are you sure you want to waste time on checking this option?</li>
             <li>The other part of my code is more interesting.</li>
         </random>
+        <br></br><br></br>
+        How about you teach me something instead?
+    <button>
+        <text>Teach me something new</text>
+        <postback>TEACH ME</postback>
+    </button>
     <button>
         <text>Go back</text>
-        <postback>MY NAME IS *</postback>
+        <postback>HI</postback>
     </button>
     </template>
 </category>
 
-<category>
-    <pattern>MY NAME IS *</pattern>
-    <template>
-         Great! Nice to meet you, <set name="name"><star/></set>.
-            <button>
-            <text>Proceed</text>
-            <postback>WHAT IS MYSQL</postback>
-            </button>
-            <button>
-            <text>...or not</text>
-            <postback>OR NOT</postback>
-            </button>
-    </template>
-</category>
-    
+
 
 </aiml>

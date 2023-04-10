@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    
+<category>
+    <pattern>SQL</pattern>
+    <template>
+        <set name="topic">SQL</set> (Structured Query Language) is a programming language designed to manage data stored in relational databases. SQL operates through simple, declarative statements. This keeps data accurate and secure, and helps maintain the integrity of databases, regardless of size. Would you like to learn about the different types of commands in SQL language?
+        <button>
+            <text>DML</text>
+            <postback>DML</postback>
+        </button>
+        <button>
+            <text>DDL</text>
+            <postback>DDL</postback>
+        </button>
+        <button>
+            <text>Constraints</text>
+            <postback>CONSTRAINTS</postback>
+        </button>
+        <button>
+            <text>User Access</text>
+            <postback>USER ACCESS</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>WHAT IS MYSQL</postback>
+        </button>
+    </template>
+</category>
+
+<topic name="SQL">
+    
+<!--                 DML                -->
+
+<!--SELECT-->
+
+<category>
+    <pattern>SELECT</pattern>
+    <template>
+        The SELECT statement is used to select data from a database. There are three ways to call the SELECT function.
+        <br></br>
+        <br></br>
+        Type out "SELECT", followed by either DESCTIPTIVE, ALL or DISTINCT to find out the correct syntax for each of them.
+        <button>
+            <text>Go back</text>
+            <postback>DML</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>SELECT *</pattern>
+    <template>
+            <think><set var="select"><star/></set></think>
+            <condition var="select">
+                
+            <li value="DESCRIPTIVE">
+                [Select data from the mentioned field names in the table.]
+                <br></br><br></br>
+                SELECT column1, column2, ...
+                <br></br>
+                FROM table_name;
+            </li>
+            
+            <li value="ALL">
+                [Select data from all fields in the table.]
+                <br></br><br></br>
+                SELECT * FROM table_name;
+            </li>
+            
+            <li value="DISTINCT">
+                [The SELECT DISTINCT statement is used to return only distinct (different) values.]
+                <br></br><br></br>
+                SELECT DISTINCT column1, column2, ...
+                <br></br>
+                FROM table_name;
+            </li>
+            </condition>
+            <button>
+                <text>Go back</text>
+                <postback>SELECT</postback>
+            </button>
+    </template>
+</category>
+  
+<!--INSERT INTO-->
+    
+<category>
+    <pattern>INSERT INTO</pattern>
+    <template>
+        The INSERT INTO statement is used to insert new records in a table. This can be done either by columns or rows.
+        <br></br>
+        <br></br>
+        Type out "INSERT by", followed by either COLUMNS or ROWS to find out the correct syntax for each of them.
+        <button>
+            <text>Go back</text>
+            <postback>DML</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>INSERT BY *</pattern>
+    <template>
+            <think><set var="insert"><star/></set></think>
+            <condition var="insert">
+                
+            <li value="COLUMNS">
+                [Insert values by specifying the separate columns.]
+                <br></br><br></br>
+                INSERT INTO table_name (column1, column2, column3, ...)
+                <br></br>
+                VALUES (value1, value2, value3, ...);
+            </li>
+            
+            <li value="ROWS">
+                [Insert separate values for all columns, but make sure the order of the values is in the same order as the columns in the table.]
+                <br></br><br></br>
+                INSERT INTO table_name
+                <br></br>
+                VALUES (value1, value2, value3, ...);
+            </li>
+            </condition>
+            <button>
+                <text>Go back</text>
+                <postback>INSERT INTO</postback>
+            </button>
+    </template>
+</category>
+
+<!--UPDATE-->
+
+<category>
+    <pattern>UPDATE</pattern>
+    <template>
+        [The UPDATE statement is used to modify the existing records in a table.]
+        <br></br><br></br>
+        UPDATE table_name
+        <br></br>
+        SET column1 = value1, column2 = value2, ...
+        <br></br>
+        WHERE condition;
+        
+        <button>
+            <text>Go back</text>
+            <postback>DML</postback>
+        </button>
+    </template>
+</category>
+
+<!--DELETE-->
+
+<category>
+    <pattern>DELETE</pattern>
+    <template>
+        [The DELETE statement is used to delete existing records in a table.]
+        <br></br><br></br>
+        DELETE FROM table_name WHERE condition;
+        
+        <button>
+            <text>Go back</text>
+            <postback>DML</postback>
+        </button>
+    </template>
+</category>
+
+<!--TRANSACTIONS-->
+
+<category>
+    <pattern>COMMIT</pattern>
+    <template>
+        [Save changes.]
+        <br></br><br></br>
+        COMMIT;
+        <button>
+            <text>Go back</text>
+            <postback>TRANSACTIONS</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>ROLLBACK</pattern>
+    <template>
+        [Roll back changes.]
+        <br></br><br></br>
+        ROLLBACK to savepoint_name; 
+        <button>
+            <text>Go back</text>
+            <postback>TRANSACTIONS</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>SAVEPOINT</pattern>
+    <template>
+        [Creates points within the groups of transactions in which to ROLLBACK.]
+        <br></br><br></br>
+        SAVEPOINT savepoint; 
+        <button>
+            <text>Go back</text>
+            <postback>TRANSACTIONS</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>SET TRANSACTION </pattern>
+    <template>
+        [Places a name on a transaction.]
+        <br></br><br></br>
+        SET TRANSACTION [ READ WRITE | READ ONLY ]; 
+        <button>
+            <text>Go back</text>
+            <postback>TRANSACTIONS</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>TRANSACTIONS</pattern>
+    <template>
+        <button>
+            <text>COMMIT</text>
+            <postback>COMMIT</postback>
+        </button>
+        <button>
+            <text>ROLLBACK</text>
+            <postback>ROLLBACK</postback>
+        </button>
+        <button>
+            <text>SAVEPOINT</text>
+            <postback>SAVEPOINT</postback>
+        </button>
+        <button>
+            <text>SET TRANSACTION</text>
+            <postback>SET TRANSACTION</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>DML</postback>
+        </button>
+    </template>
+</category>
+
+
+<!--           DDL           -->
+
+<!--CREATE-->
+
+<category>
+    <pattern>CREATE</pattern>
+    <template>
+        The CREATE statement is used to create a new SQL object. There are various types of SQL objects, including databases, tables and indexes.
+        <br></br>
+        <br></br>
+        Type "CREATE", followed by either DATABASE/TABLE/INDEX to find out the correct syntax for each of them.
+        <button>
+            <text>Go back</text>
+            <postback>DDL</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>CREATE *</pattern>
+    <template>
+            <think><set var="create"><star/></set></think>
+            <condition var="create">
+                
+            <li value="DATABASE">
+                [Create a database.]
+                <br></br><br></br>
+                CREATE DATABASE database_name;
+            </li>
+            
+            <li value="TABLE">
+                [Create a table.]
+                <br></br><br></br>
+                CREATE TABLE table_name (column1 datatype, column2 datatype, column3 datatype, ...);
+
+            </li>
+            
+            <li value="INDEX">
+                [Creates and index.]
+                <br></br><br></br>
+                CREATE INDEX index_name
+                <br></br>
+                ON table_name (column1, column2, ...);
+
+            </li>
+            </condition>
+            <button>
+                <text>Go back</text>
+                <postback>CREATE</postback>
+            </button>
+    </template>
+</category>
+
+
+<!--DROP-->
+
+<category>
+    <pattern>DROP</pattern>
+    <template>
+        The DROP statement is used to drop (completely delete) an existing SQL object.        
+        <br></br>
+        <br></br>
+        Type "DROP", followed by either DATABASE/TABLE to find out the correct syntax.
+        <button>
+            <text>Go back</text>
+            <postback>DDL</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>DROP *</pattern>
+    <template>
+            <think><set var="drop"><star/></set></think>
+            <condition var="drop">
+                
+            <li value="DATABASE">
+                [Delete a database.]
+                <br></br><br></br>
+                DROP DATABASE database_name;
+            </li>
+            
+            <li value="TABLE">
+                [Delete a table.]
+                <br></br><br></br>
+                DROP TABLE table_name;
+            </li>
+            
+            </condition>
+            <button>
+                <text>Go back</text>
+                <postback>DROP</postback>
+            </button>
+    </template>
+</category>
+
+
+<!--ALTER TABLE-->
+
+<category>
+    <pattern>ALTER</pattern>
+    <template>
+        The ALTER TABLE statement is used to add or modify columns in an existing table.       
+        <br></br>
+        <br></br>
+        Type "ALTER TABLE", followed by either ADD/MODIFY to find out the correct syntax for each of the ways you can alter a table.
+        <button>
+            <text>Go back</text>
+            <postback>DDL</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>ALTER TABLE *</pattern>
+    <template>
+            <think><set var="alter"><star/></set></think>
+            <condition var="alter">
+                
+            <li value="ADD">
+                [Add additional columns to a table.]
+                <br></br><br></br>
+                ALTER TABLE table
+                <br></br>
+                ADD (column datatype [DEFAULT expr]
+                <br></br>
+                [, column datatype]...);
+
+            </li>
+            
+            <li value="MODIFY">
+                [Modify a column's data from a table.]
+                <br></br><br></br>
+                ALTER TABLE table
+                <br></br>
+                MODIFY (column datatype [DEFAULT expr]
+                <br></br>
+                [, column datatype]...);
+
+            </li>
+            
+            </condition>
+            <button>
+                <text>Go back</text>
+                <postback>ALTER</postback>
+            </button>
+    </template>
+</category>
+
+<category>
+    <pattern>RENAME</pattern>
+    <template>
+        [Renames a SQL object.]
+        <br></br><br></br>
+        object_name TO newname;
+        <button>
+            <text>Go back</text>
+            <postback>DDL</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>TRUNCATE</pattern>
+    <template>
+        [Deletes all rows in a table.]
+        <br></br><br></br>
+        TRUNCATE TABLE tablename;
+        <button>
+            <text>Go back</text>
+            <postback>DDL</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>COMMENT</pattern>
+    <template>
+        [Adds, revise or remove a comment on a table.]
+        <br></br><br></br>
+        COMMENT ON TABLE table_name
+        <br></br>
+        IS 'newname';
+        <button>
+            <text>Go back</text>
+            <postback>DDL</postback>
+        </button>
+    </template>
+</category>
+
+
+<!--           CONSTRAINTS            -->
+
+<!--NOT NULL-->
+
+<category>
+    <pattern>NOT NULL </pattern>
+    <template>
+        The NOT NULL constraint enforces a column to NOT accept NULL values. This enforces a field to always contain a value, which means that you cannot insert a new record, or update a record without adding a value to this field.
+        <br></br><br></br>
+        Type "NOT NULL on", followed by either CREATE/ALTER to find out the correct syntax for each of the NOT NULL Constraints.
+        <button>
+            <text>Go back</text>
+            <postback>CONSTRAINTS</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>NOT NULL ON *</pattern>
+    <template>
+            <think><set var="not null"><star/></set></think>
+            <condition var="not null">
+                
+            <li value="CREATE">
+                CREATE TABLE table_name (
+                <br></br>
+                column1 datatype NOT NULL,
+                <br></br>
+                column2 datatype NOT NULL,
+                <br></br>
+                column3 datatype NOT NULL,
+                <br></br>
+                column4 datatype
+                <br></br>
+                );
+            </li>
+            
+            <li value="MODIFY">
+                ALTER TABLE table_name
+                <br></br>
+                MODIFY column1 datatype NOT NULL;
+            </li>
+            
+            </condition>
+            <button>
+                <text>Go back</text>
+                <postback>NOT NULL</postback>
+            </button>
+    </template>
+</category>
+
+<!--KEY-->
+
+<category>
+    <pattern>KEY </pattern>
+    <template>
+        KEYS in DBMS is an attribute or set of attributes which helps you to identify a row(tuple) in a relation(table). They allow you to find the relation between two tables. Keys help you uniquely identify a row in a table by a combination of one or more columns in that table.
+        <br></br><br></br>
+        Type either PRIMARY/FOREIGN/UNIQUE followed by "KEY" to find out the correct syntax for each of the different types of keys.
+        <button>
+            <text>Go back</text>
+            <postback>CONSTRAINTS</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>* KEY</pattern>
+    <template>
+            <think><set var="key"><star/></set></think>
+            <condition var="key">
+                
+            <li value="PRIMARY">
+                [The PRIMARY KEY constraint uniquely identifies each record in a table. A table can have only ONE primary key; and in the table, this primary key can consist of single or multiple columns (fields).]
+                <br></br><br></br>
+                PRIMARY KEY (column);
+            </li>
+            
+            <li value="FOREIGN">
+                [A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table. The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table.]
+                
+                <br></br><br></br>
+                FOREIGN KEY (column);
+            </li>
+            
+            <li value="UNIQUE">
+                [The UNIQUE constraint ensures that all values in a column are different.]
+                
+                <br></br><br></br>
+                CONSTRAINT constraint_name UNIQUE (column);
+           
+            </li>
+            </condition>
+            <button>
+                <text>Go back</text>
+                <postback>KEY</postback>
+            </button>
+    </template>
+</category>
+
+<!--CHECK-->
+
+<category>
+    <pattern>CHECK</pattern>
+    <template>
+        [The CHECK constraint is used to limit the value range that can be placed in a column. If you define a CHECK constraint on a column it will allow only certain values for this column.]
+        <br></br><br></br>
+        CONSTRAINT constraint_name
+        <br></br>
+	    CHECK (column2 BETWEEN no1 AND no2),…
+        <button>
+            <text>Go back</text>
+            <postback>CONSTRAINTS</postback>
+        </button>
+    </template>
+</category>
+
+
+<!--           USER ACCESS            -->
+
+<!--USER-->
+
+<category>
+    <pattern>CREATE USER</pattern>
+    <template>
+        [The DBA creates users by using the CREATE USER statement.]
+        <br></br><br></br>
+        CREATE USER user
+        <br></br>
+        IDENTIFIED BY password;
+        <button>
+            <text>Go back</text>
+            <postback>USER</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>CREATE ROLE</pattern>
+    <template>
+        [SQL roles are useful for administering privileges when a database has many users.]
+        <br></br><br></br>
+        CREATE ROLE role_name;
+        <button>
+            <text>Go back</text>
+            <postback>USER</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>GRANT ROLE</pattern>
+    <template>
+        [Roles provide a more powerful way to grant privileges to users' sessions than to grant privileges to each user of the database, which easily becomes tedious and error-prone when many users are involved.]
+        <br></br><br></br>
+        GRANT ROLE role_name;
+        <button>
+            <text>Go back</text>
+            <postback>USER</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>PASSWORD</pattern>
+    <template>
+        [Users can change their password by using the ALTER USER statement.]
+        <br></br><br></br>
+        CREATE USER user
+        <br></br>
+        IDENTIFIED BY password;
+        <button>
+            <text>Go back</text>
+            <postback>USER</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>USER</pattern>
+    <template>
+        A user is a database level security principal. Logins must be mapped to a database user to connect to a database. A login can be mapped to different databases as different users but can only be mapped as one user in each database.
+        <button>
+            <text>CREATE USER</text>
+            <postback>CREATE USER</postback>
+        </button>
+        <button>
+            <text>CREATE ROLE</text>
+            <postback>CREATE ROLE</postback>
+        </button>
+        <button>
+            <text>GRANT ROLE</text>
+            <postback>GRANT ROLE</postback>
+        </button>
+        <button>
+            <text>PASSWORD</text>
+            <postback>PASSWORD</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>USER ACCESS</postback>
+        </button>
+    </template>
+</category>
+
+<!--PRIVILEGE-->
+
+<category>
+    <pattern>SYSTEM PRIVILEGE</pattern>
+    <template>
+        [Gain access to the database.]
+        <br></br><br></br>
+        CREATE USER user
+        <br></br>
+        GRANT user_priv [, privilege...]
+        <br></br>
+        TO user [, user...];
+        <button>
+            <text>Go back</text>
+            <postback>PRIVILEGE</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>OBJECT PRIVILEGE</pattern>
+    <template>
+        [Manipulate the content of the database objects.]
+        <br></br><br></br>
+        CREATE USER user
+        <br></br>
+        GRANT object_priv [(columns)]
+        <br></br>
+        ON object
+        <br></br>
+        TO {user|role|PUBLIC}
+        <button>
+            <text>Go back</text>
+            <postback>PRIVILEGE</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>REVOKE</pattern>
+    <template>
+        [Manipulate the content of the database objects.]
+        <br></br><br></br>
+        REVOKE {privilege [, privilege...]|ALL}
+        <br></br>
+        ON object
+        <br></br>
+        FROM {user[, user...]|role|PUBLIC}
+        <button>
+            <text>Go back</text>
+            <postback>PRIVILEGE</postback>
+        </button>
+    </template>
+</category>
+
+
+<category>
+    <pattern>PRIVILEGE</pattern>
+    <template>
+        A privilege is a right to execute a particular type of SQL statement or to access another user's object. There are two types of privileges that can be granted in SQL.
+        <button>
+            <text>GRANT SYSTEM PRIVILEGE</text>
+            <postback>SYSTEM PRIVILEGE</postback>
+        </button>
+        <button>
+            <text>GRANT OBJECT PRIVILEGE</text>
+            <postback>OBJECT PRIVILEGE</postback>
+        </button>
+        <button>
+            <text>REVOKE</text>
+            <postback>REVOKE</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>USER ACCESS</postback>
+        </button>
+    </template>
+</category>
+
+
+<!--                   MAIN MENUS                         -->    
+    
+<category>
+    <pattern>DML</pattern>
+    <template>
+        In the context of SQL, data definition or data description language (DDL) is a syntax for creating and modifying database objects such as tables, indices, and users. Click a button to explore the different DML functions.
+        <button>
+            <text>SELECT</text>
+            <postback>SELECT</postback>
+        </button>
+        <button>
+            <text>INSERT INTO</text>
+            <postback>INSERT INTO</postback>
+        </button>
+        <button>
+            <text>UPDATE</text>
+            <postback>UPDATE</postback>
+        </button>
+        <button>
+            <text>DELETE</text>
+            <postback>DELETE</postback>
+        </button>
+        <button>
+            <text>Transactions</text>
+            <postback>TRANSACTIONS</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>SQL</postback>
+        </button>
+    </template>
+</category>
+    
+<category>
+    <pattern>DDL</pattern>
+    <template>
+        In the context of SQL, data definition or data description language (DDL) is a syntax for creating and modifying database objects such as tables, indices, and users. Click a button to explore the different DDL functions.
+        <button>
+            <text>CREATE</text>
+            <postback>CREATE</postback>
+        </button>
+        <button>
+            <text>DROP</text>
+            <postback>DROP</postback>
+        </button>
+        <button>
+            <text>ALTER</text>
+            <postback>ALTER</postback>
+        </button>
+        <button>
+            <text>RENAME</text>
+            <postback>RENAME</postback>
+        </button>
+        <button>
+            <text>TRUNCATE</text>
+            <postback>TRUNCATE</postback>
+        </button>
+        <button>
+            <text>COMMENT</text>
+            <postback>COMMENT</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>SQL</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>CONSTRAINTS</pattern>
+    <template>
+        SQL constraints are used to specify rules for data in a table. Constraints can be specified when the table is created with the CREATE TABLE statement, or after the table is created with the ALTER TABLE statement.
+        <button>
+            <text>NOT NULL</text>
+            <postback>NOT NULL</postback>
+        </button>
+        <button>
+            <text>KEY</text>
+            <postback>KEY</postback>
+        </button>
+        <button>
+            <text>CHECK</text>
+            <postback>CHECK</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>SQL</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>USER ACCESS</pattern>
+    <template>
+        SQL access control is based on privileges assigned to authorization identifiers to access objects. The creator of an object in a database is its owner and can perform any action on the object. By default, no other user can access the object unless the owner grants specific privileges to that user.
+        <button>
+            <text>USER</text>
+            <postback>USER</postback>
+        </button>
+        <button>
+            <text>PRIVILEGE</text>
+            <postback>PRIVILEGE</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>SQL</postback>
+        </button>
+    </template>
+</category>
+   
+</topic>
+
+</aiml>
