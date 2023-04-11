@@ -52,6 +52,13 @@
                         <li>Who should this <get name="subject"/> be?</li>
                     </condition>
                 </li>
+                <li value="WHERE">
+                    <condition name="answer">
+                        <li value="SQL Command">Yes, you said that <get name="subject"/> is a <get name="answer"/>.</li>
+                        <li value="easy to use">I think that <get name="subject"/> is very <get name="answer"/> easy, indeed. You told me this is true</li>
+                        <li>I have no idea about <get name="subject"/>.</li>
+                    </condition>
+                </li>
                 <li>I don't know what to say about this. Please teach me.</li>
             </condition>
             </template>
